@@ -1,0 +1,16 @@
+# book_tracker.py
+
+# A simple book tracker prototype
+
+# Step 1: Create a list of books
+books = []
+
+# Step 2: Add some example books
+books.append("The Hobbit by J.R.R. Tolkien")
+books.append("Howl by Allen Ginsberg")
+books.append("Red White and Royal Blue by Casey McQuinston")
+
+# Step 3: Print all books in the tracker
+print("📚 My Book Tracker:")
+for book in books:
+    print("-", book)
