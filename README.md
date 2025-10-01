@@ -1,6 +1,7 @@
-# Project Title
+# Sinsar Dubh 
 
 Books tracker with personalised way to keep track of non-published (non-monetary) work of fiction, non-fiction and more, like AO3 content. 
+My idea, not Barrons'. 
 
 ---
 
