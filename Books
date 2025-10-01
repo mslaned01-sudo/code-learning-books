@@ -1,16 +1,46 @@
 # book_tracker.py
 
-# A simple book tracker prototype
+# 📚 A simple book tracker with functions
 
 # Step 1: Create a list of books
 books = []
 
-# Step 2: Add some example books
-books.append("The Hobbit by J.R.R. Tolkien")
-books.append("Howl by Allen Ginsberg")
-books.append("Red White and Royal Blue by Casey McQuinston")
+# Step 2: Define functions
+def add_book(title, author):
+    """Add a book to the tracker."""
+    book = f"{title} by {author}"
+    books.append(book)
+    print(f"✅ Added: {book}")
 
-# Step 3: Print all books in the tracker
-print("📚 My Book Tracker:")
-for book in books:
-    print("-", book)
+def list_books():
+    """List all books in the tracker."""
+    print("\n📚 My Book Tracker:")
+    if not books:
+        print("No books yet!")
+    else:
+        for i, book in enumerate(books, start=1):
+            print(f"{i}. {book}")
+
+def remove_book(index):
+    """Remove a book by its number (index)."""
+    if 0 <= index < len(books):
+        removed = books.pop(index)
+        print(f"❌ Removed: {removed}")
+    else:
+        print("⚠️ Invalid index. Please try again.")
+
+# Step 3: Try it out
+if __name__ == "__main__":
+    # Add example books
+    add_book("The Hobbit", "J.R.R. Tolkien")
+    add_book("Howl", "Allen Ginsberg")
+    add_book("Red, White & Royal Blue", "Casey McQuinston")
+
+    # Show list
+    list_books()
+
+    # Remove the 2nd book
+    remove_book(1)
+
+    # Show updated list
+    list_books()
